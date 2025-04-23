@@ -1,4 +1,4 @@
-package edu.estatuas.furnace;
+package edu.estatuas.furnace.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
