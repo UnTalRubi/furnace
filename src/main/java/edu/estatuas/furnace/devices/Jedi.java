@@ -27,9 +27,8 @@ public class Jedi implements Heater {
         return lightSaberTemp;
     }
 
-    private void forcePersuasion(Heater heater, RoomTemperature temperature) {
-        temperature.incrementTemperature(-lightSaber());
-        heater.disengage(temperature);
+    private void forcePersuasion(RoomTemperature temperature) {
+        temperature.incrementTemperature(-1400);
     }
 
     @Override
@@ -39,7 +38,6 @@ public class Jedi implements Heater {
 
     @Override
     public void disengage(RoomTemperature temperature) {
-        Heater heater = new GasHeater();
-        this.forcePersuasion(heater, temperature);
+        this.forcePersuasion(temperature);
     }
 }
