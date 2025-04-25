@@ -3,8 +3,9 @@ package edu.estatuas.furnace.devices;
 import edu.estatuas.furnace.interfaces.*;
 import edu.estatuas.furnace.miscelaneus.*;
 
-public class Regulator {
+public class Controller implements Regulator {
 
+    @Override
     public void regulate(Thermometer thermometer, Heater heater, double MIN_TEMP, double MAX_TEMP,
             RoomTemperature temperature) {
 

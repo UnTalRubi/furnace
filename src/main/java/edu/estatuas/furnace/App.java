@@ -1,7 +1,7 @@
 package edu.estatuas.furnace;
 
 import edu.estatuas.furnace.devices.GasHeater;
-import edu.estatuas.furnace.devices.Regulator;
+import edu.estatuas.furnace.devices.Controller;
 import edu.estatuas.furnace.devices.Sensor;
 import edu.estatuas.furnace.devices.Jedi;
 import edu.estatuas.furnace.interfaces.Heater;
@@ -18,7 +18,7 @@ public class App {
         Heater heater = new GasHeater();
         Thermometer thermometer = new Sensor();
 
-        Regulator regulator = new Regulator();
+        Controller regulator = new Controller();
 
         System.out.println("Starting...");
         regulator.regulate(thermometer, heater, MIN_TEMP, MAX_TEMP, temperature);
